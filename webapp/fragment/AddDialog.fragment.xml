@@ -27,9 +27,9 @@
         </VBox>
 
        <buttons>
-        <Button text="Save Draft" type="Ghost" press=".onSaveAdd" icon="sap-icon://save"/>
-        <Button text="Send" type="Emphasized" press=".onSendAdd" icon="sap-icon://paper-plane"/>
-        <Button text="Cancel" press=".onCancelAdd" />
+        <Button text="Save Draft" type="Ghost" press="onSaveAdd" icon="sap-icon://save"/>
+        <Button text="Send" type="Emphasized" press="onSendAdd" icon="sap-icon://paper-plane"/>
+        <Button text="Cancel" press="onCancelAdd" />
        </buttons>
     </Dialog>
 </core:FragmentDefinition>

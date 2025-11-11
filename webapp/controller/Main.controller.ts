@@ -32,6 +32,7 @@ import { ValueState } from "sap/ui/core/library";
 import type Button from "sap/m/Button";
 import type Dialog from "sap/m/Dialog";
 import Spreadsheet from "sap/ui/export/Spreadsheet";
+import MessageToast from "sap/m/MessageToast";
 
 /**
  * @namespace base.controller
@@ -546,6 +547,12 @@ export default class Main extends Base {
   //Hàm sửa
   public onEdit(): void {
     console.log("Edit button clicked");
+    MessageToast.show("Đã nhấn nút Chỉnh sửa");
+  }
+
+  // Hàm lưu khi thêm mới
+  public onSaveAdd(): void {
+    MessageToast.show("Đã nhấn nút thêm mới");
   }
 
   //Hàm xoá
