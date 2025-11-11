@@ -535,7 +535,7 @@ export default class Main extends Base {
     this.getControlById<Button>("btnDelete").setEnabled(enable);
   }
 
-  //onAdd
+  //Xử lý khi add
   async onAdd(): Promise<void> {
     this.dialog ??= (await this.loadFragment({
       name: "base.fragment.AddDialog",
@@ -543,17 +543,21 @@ export default class Main extends Base {
     this.dialog.open();
   }
 
-  //onEdit
+  //Hàm sửa
   public onEdit(): void {
     console.log("Edit button clicked");
   }
 
-  //onDelete
+  //Hàm xoá
   public onDelete(): void {
     console.log("Delete button clicked");
   }
+  // Đóng diglog
+  public onCancelAdd(): void {
+    this.dialog.close();
+  }
 
-  //onExportExcel
+  //Xuất excel
   public onExportExcel(): void {
     const data = this.getModel<JSONModel>("table").getProperty("/rows");
 
@@ -586,10 +590,5 @@ export default class Main extends Base {
       .catch((err) => {
         console.error("Spreadsheet export error:", err);
       });
-  }
-
-  // onCancel
-  public onCancelAdd(): void {
-    this.dialog.close();
   }
 }
